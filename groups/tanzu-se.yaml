@@ -1,0 +1,26 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: tanzu-se-org
+  description: Tanzu SE Organization
+  links:
+    - url: https://github.com/Tanzu-Solutions-Engineering
+      title: Tanzu SE GitHub
+spec:
+  type: organization
+  profile:
+    displayName: Tanzu SE Organization
+    email: tanzu-se@vmware.com
+    picture: https://blogs.vmware.com/cloudprovider/files/2021/09/logo-vmware-tanzu-square-Header-327x324.png
+  children: [tanzu-se-southeast-team]
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: tanzu-se-southeast-group
+  description: The Tanzu SE Southeast Team
+spec:
+  targets:
+    - ./tanzu-se-southeast-team.yaml
+    - ./nitashav-user.yaml
+    - ./cdelashmutt-user.yaml
